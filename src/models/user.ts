@@ -31,7 +31,7 @@ const passwordValidator = (password, cb) => {
   }
 
   if (commonPasswordList.test(password)) {
-    return cb(new Error('Password is too common'));
+    return cb('Password is too common');
   }
   
   return cb();
