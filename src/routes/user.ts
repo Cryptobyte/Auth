@@ -119,7 +119,7 @@ router.post('/signin', limits.secure, async(req: Request, res: Response, next: N
         console.log((uerr) ? uerr : 'No User');
         return res.status(500).send({
           error: ((uerr) && (uerr.message)) ? uerr.message : 
-            'Incorrect email or password'
+            'Incorrect username or password'
         });
       }
 
